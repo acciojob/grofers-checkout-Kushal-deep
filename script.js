@@ -2,8 +2,16 @@ const getSumBtn = document.createElement("button");
 getSumBtn.append("Get Total Price");
 document.body.appendChild(getSumBtn);
 
-const resultDisplay = document.createElement("p");
-document.body.appendChild(resultDisplay);
+// const resultDisplay = document.createElement("p");
+// document.body.appendChild(resultDisplay);
+
+let table=document.querySelector("table")
+let row=document.createElement("tr")
+let cell1=document.createElement("td")
+let cell2=document.createElement("td")
+
+
+
 
 const getSum = () => {
 //Add your code here
@@ -13,9 +21,14 @@ const getSum = () => {
 		sum=sum+parseInt(arr[i].innerHTML);
 		
 	}
-	resultDisplay.innerText=sum
+	cell1.innerHTML="Total Price"
+	cell2.innerText=sum
   
 };
+
+row.appendChild(cell1)
+row.appendChild(cell2)
+table.append(row)
 
 getSumBtn.addEventListener("click", getSum);
 

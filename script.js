@@ -21,7 +21,7 @@ const getSum = () => {
 		sum=sum+parseInt(arr[i].innerHTML);
 		
 	}
-	cell1.innerHTML="Total Price"
+	cell1.innerHTML="Total value"
 	cell2.innerText=sum
   
 };
